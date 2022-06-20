@@ -14,7 +14,7 @@ console.log(challenge.toUpperCase());
 console.log(challenge.toLowerCase());
 
 /*
- 6 substring(startingIndex, stopingIndex) -> slice a string using startingIndex and 
+ 6 substring(startingIndex, stopingIndex) -> slice a string using startingIndex and stopingIndex
  substring  doesn't include the character at the stopping index
  */
  console.log(challenge.substring(0, 3));
