@@ -8,7 +8,7 @@ let varTwo
 let varThree
 let varFour
 
-let varOneValue = 'value of varOne'
+let varOneValue = 'value of varOn'
 let varTwoValue = 2
 let varThreeValue = true
 let varFourValue = undefined
