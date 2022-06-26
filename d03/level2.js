@@ -73,11 +73,48 @@ console.log("you will be paid: " + toBePaid)
 // 10 compare different value (ternary operator)
 let userName = prompt("Enter your name:")
 userName.length > 7 ? console.log("your name is long"): console.log("your name is short")
-*/
+
 
 // 11 prompt to user
 let firstNam = prompt("Enter firstName: ")
 let lastNam = prompt("Enter lastName: ")
 firstNam.length > lastNam.length 
 ? console.log(`your name, ${firstNam} is longer than your family name, ${lastNam}`) 
-: console.log(`your name, ${firstNam} is shorter than your family name, ${firstNam}`); 
+: console.log(`your name, ${firstNam} is shorter than your family name, ${firstNam}`)
+
+
+// 12 calculate age 
+let myAge = parseInt(prompt("Enter my age: ")) 
+let yourAge = parseInt(prompt("Enter your age: "))
+
+myAge > yourAge 
+? console.log(`i'm ${myAge - yourAge} older than you`)
+: console.log(`you are ${yourAge - myAge} older than me`)
+
+
+// 13 calculate
+let actualYear = new Date().getFullYear()
+let userBirthYear = parseInt(prompt("Enter your birth year: "))
+let userAge = actualYear - userBirthYear 
+userAge >= 18 
+? console.log(`greaty you can drive`)
+: console.log(`you have to wait ${18 - userAge} year before driving`);
+
+
+// 14 calculate second person can live
+let numberOfYear = parseInt(prompt("Enter number of year: "))
+const secondInOneYear = 31563000
+console.log(`you lived ${secondInOneYear * numberOfYear} second`)
+
+
+// 15 human redable time
+let humanDate = new Date()
+let year = humanDate.getFullYear()
+let month = humanDate.getMonth() + 1 // month in js [0-11]
+let day = humanDate.getDate() 
+let hour = humanDate.getHours()
+let minute = humanDate.getMinutes()
+console.log(`${year}-${month}-${day} ${hour}:${minute}`)
+// for this exercise all possible declination can be made just by changing variable position.
+*/
+
