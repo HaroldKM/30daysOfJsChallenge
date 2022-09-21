@@ -1,14 +1,14 @@
 const countries = [
     'Albania',
-    'Bolivia',
-    'Canada',
-    'Denmark',
-    'Ethiopia',
     'Finland',
     'Germany',
+    'Bolivia',
     'Hungary',
     'Ireland',
     'Japan',
+    'Canada',
+    'Denmark',
+    'Ethiopia',
     'Kenya',
     'Iceland'
   ]
