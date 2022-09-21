@@ -1,4 +1,3 @@
-const mernStack = ["MongoDB", "Express", "React", "Node"];
 /*
 // 1 iterate 0 to 10
 // for loop 
@@ -133,7 +132,7 @@ console.log(`sumOdd = ${sumOdd} | sumEven = ${sumEven}`);
 console.log(sumArray);
 
 
-// 13-14 a small script which generate array of 5 random number
+// 13-14 a small script which generate array of 5 random unique number
 const randomArray = []
 const closeBorn = 10
 let randomNum = Math.floor(Math.random() * closeBorn)
@@ -145,15 +144,22 @@ for(let i=0; i<5; i++){
 }
 
 console.log(randomArray);
-*/
 
-// 15 six characts random id
+
+// 15 six characts unique random id
 const alphaNum = "abcdefghigklmnopqrstuvwxyz0123456789";
 const closeBornSize = alphaNum.length;
+console.log(closeBornSize);
 let randomId = "";
+let randomNum = Math.floor(Math.random() * closeBornSize);
+
 for (let i = 0; i < 6; i++) {
-  let randomNum = Math.floor(Math.random() * closeBornSize);
+  // check if the value picked from the aplaNum already exist in the randomId (remember it has to be unique)
+  while (randomId.includes(alphaNum[randomNum])) {
+    randomNum = Math.floor(Math.random() * closeBornSize); //0-35
+  }
   randomId += alphaNum[randomNum];
 }
 
 console.log(randomId);
+*/
