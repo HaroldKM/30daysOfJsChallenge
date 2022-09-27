@@ -69,13 +69,10 @@ const userIdGenerator = () => {
   let randomNum = Math.floor(Math.random() * closeBornSize);
 
   for (let i = 0; i < numberOfCharact; i++) {
-    // check if the value picked from the aplaNum already exist in the randomId (remember it has to be unique)
-    while (randomId.includes(alphaNum[randomNum])) {
-      randomNum = Math.floor(Math.random() * closeBornSize); //0-35
-    }
+    randomNum = Math.floor(Math.random() * closeBornSize); //0-35
     randomId += alphaNum[randomNum];
   }
-  return randomId
+  return randomId;
 };
 
 console.log(userIdGenerator());
