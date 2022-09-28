@@ -57,7 +57,7 @@ const randomHexaNumberGenerator = () => {
 };
 
 console.log(randomHexaNumberGenerator());
-*/
+
 
 // 18 userIdGenerator
 const userIdGenerator = () => {
@@ -76,3 +76,4 @@ const userIdGenerator = () => {
 };
 
 console.log(userIdGenerator());
+*/

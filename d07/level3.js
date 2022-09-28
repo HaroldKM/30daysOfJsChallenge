@@ -1,42 +1,66 @@
 /*
-// 1  copy array (remeber shallow copy and deep copy)
-const newCountries = [...countries]
-console.log(newCountries);
+// 1 userIdGeneratedByUser
+const userIdGeneratedByUser = () => {
+  let numberOfCharact = parseInt(prompt("Enter number of charact"));
+  let numberOfId = +prompt("Enter number of id to be generated");
+  const idArray = [];
+  const alphaNum = "abcdefghigklmnopqrstuvwxyz0123456789@-ç&éABCDEFGHIGKLMNOPQRSTUVWXYZ";
+  const closeBornSize = alphaNum.length;
+  // console.log(closeBornSize);
+  let randomId = "";
+  let randomNum = 0;
 
-
-// 2 copy of country which are not modifiable
-const sortedCountries = [...countries].sort()
-console.log(sortedCountries, countries)
-
-// 3 sort mern and webTechs array
-console.log(mernStack.sort(), webTechs.sort());
-
-// 4 extract country containing land
-const landCountries = countries.filter(x=> x.includes('land'))
-console.log(landCountries);
-
-
-
-// 5 highest number of char
-let highestSize = 0
-let highestCountry = ''
-for(country of countries){
-    if(country.length > highestSize) {
-        highestSize = country.length
-        highestCountry = country
+  while (numberOfId > 0) {
+    for (let i = 0; i < numberOfCharact; i++) {
+      randomNum = Math.floor(Math.random() * closeBornSize); //0-35
+      randomId += alphaNum[randomNum];
     }
+    idArray.push(randomId);
+    randomId = "";
+    numberOfId--;
+  }
+
+  return idArray;
+};
+
+console.log(userIdGeneratedByUser());
+
+
+
+// 2 rgb generator
+const rgbColorGenerator = () => {
+  let rgb = [];
+  let randomNum = "";
+  let closeBorn = 255; // rgb color number start from 0 to 255
+  for (let i = 0; i < 3; i++) {
+    randomNum = Math.floor(Math.random() * closeBorn + 1); // +1 to include the final number [0-255] insteat of [0-255[
+    rgb.push(randomNum);
+  }
+  console.log(`rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`);
 }
 
-console.log(highestCountry);
-
-
-// 6-7 array with only for charact
-const fourCharactCountries = countries.filter(x=> x.length === 4)
-console.log(fourCharactCountries);
-
-
-// 8-9 reverse array
-const reversoCountry = countries.map((x => x.toUpperCase())).reverse()
-console.log(reversoCountry);
+rgbColorGenerator()
 */
 
+
+// 5 convertHexaToRgb // parseInt(base 10)
+const splitHex = (hex) => {
+  const regex = /[a-zA-Z0-9]{2,2}/g
+  const hexSplited =  hex.match(regex)
+  return hexSplited
+
+} 
+const convertHexaToRgb = (hex) => {
+  const arrayHexaToRgb = splitHex(hex);
+  for(let i = 0; i < arrayHexaToRgb.length; i++){
+    arrayHexaToRgb[i] = parseInt(arrayHexaToRgb[i] ,16)
+  }
+
+ 
+  console.log(`rgb(${arrayHexaToRgb[0]},${arrayHexaToRgb[1]},${arrayHexaToRgb[2]})`);
+}
+
+convertHexaToRgb('#12ab3d')
+
+
+// 6 convertRgbToHexa // number.toString(base16)
