@@ -117,7 +117,7 @@ const arrayOfRgbColor = () => {
 // console.log(arrayOfRgbColor());
 
 const generateColors = (colorModel, numberOfColor) => {
-  // this function is intend to return an array of the specified number of rgb of hexa color
+  // this function is intend to return an array of the specified number of rgb or hexa color
   const arrayOfColors = (numberOfColor, callback) => {
     const arrayOfColor = [];
     for (let i = 0; i < numberOfColor; i++) {
@@ -144,4 +144,35 @@ console.log(generateColors("hexa", 1));
 console.log(generateColors("hexa", 100));
 console.log(generateColors("rgb", 100));
 console.timeEnd("color");
+
+
+// 16 check if items in the array are unique
+const uniqueItems = (array) => {
+  let itemsCounter = 0
+  let actualValue = 0
+  for(let i = 0; i < array.length; i++) { 
+    for(let j = 1; j<= array.length; j++){
+      actualValue = array[i];
+      if(array[j] === actualValue) itemsCounter++
+      if(itemsCounter >= 2) return false
+    }
+    itemsCounter = 0
+  }
+  return true
+}
+
+const uniqueArray = [1,2,3,4,5,6,7,8,9,10]
+const notUniqueArray = [1,2,3,5,6,7,1,8,6]
+console.log(uniqueItems(notUniqueArray));
+
+
+// 18 isValidVariable
+const isValidVariable = (variable) => {
+  const specialCharact = variable.match(/[^a-zA-Z0-9$_]/g);
+  const retrunVal = specialCharact === null ? true : false;
+  return retrunVal
+};
+const validVariable = 'hello_How_are_You$'
+const inValidVariable = "&é(-è_herçosà@)=)kiol"
+console.log(isValidVariable(validVariable));
 */
