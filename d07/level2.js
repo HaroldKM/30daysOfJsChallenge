@@ -16,7 +16,7 @@ const add0 = (elt) =>{ // we use this function to add 0 to number under 10 to ha
 }
 
 const showDateTime = () => {
-  const today = new Date();b
+  const today = new Date();
   const date = add0(today.getDate()); // month day (1-31)
   const month = add0(today.getMonth() + 1); // month of the year (0-11)
   const year = add0(today.getFullYear());

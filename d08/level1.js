@@ -1,3 +1,4 @@
+/*
 // 1 -creating an object
 const dog = {};
 
@@ -30,3 +31,4 @@ dog.breed = "i'm bredding"
 // for dogInfo just call getObjectValue(dog)
 
 getObjectValue(dog);
+*/

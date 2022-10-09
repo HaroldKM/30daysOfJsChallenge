@@ -1,9 +1,10 @@
+
 /*
 // 1 generate any number of character
 let numberOfCharact = parseInt(prompt('Enter number of charact'))
 const alphaNum = "abcdefghigklmnopqrstuvwxyz0123456789";
 const closeBornSize = alphaNum.length;
-console.log(closeBornSize);
+// console.log(closeBornSize);
 let randomId = "";
 let randomNum = Math.floor(Math.random() * closeBornSize);
 

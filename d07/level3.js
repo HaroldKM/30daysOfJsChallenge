@@ -169,8 +169,8 @@ console.log(uniqueItems(notUniqueArray));
 // 18 isValidVariable
 const isValidVariable = (variable) => {
   const specialCharact = variable.match(/[^a-zA-Z0-9$_]/g);
-  const retrunVal = specialCharact === null ? true : false;
-  return retrunVal
+  const returnVal = specialCharact === null ? true : false;
+  return returnVal
 };
 const validVariable = 'hello_How_are_You$'
 const inValidVariable = "&é(-è_herçosà@)=)kiol"
