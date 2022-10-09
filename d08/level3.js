@@ -133,7 +133,7 @@ personAccount.addIncome("etp3", 200000)
 console.log(personAccount.incomes);
 console.log(personAccount.totalIncome());
 console.log(personAccount.accountBalance());
-*/
+
 
 // 2-a create a signup fonction 
 //userId generator (took from d06 lvl2 q1)
@@ -257,3 +257,4 @@ likeProduct('fg12cy', 1);
 console.log(products);
 
 
+*/
